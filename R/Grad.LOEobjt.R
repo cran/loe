@@ -4,7 +4,7 @@ function(vecx,adm, P, C=1){
 					X <- matrix(vecx,nrow=N,ncol=P)
 					D<- make.distmat(X)
 					igrad <- rep(0,N*P)
-					.C("LOEgrad",#Cルーチン名
+					.C("LOEgrad",
 						arg1=as.double(igrad),
 						arg2=as.double(X),
 						arg3=as.double(D),

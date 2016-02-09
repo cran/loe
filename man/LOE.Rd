@@ -63,6 +63,7 @@ Yoshikazu Terada
 #################
 #Realizable case#
 #################
+library(igraph)
 ###############################
 #Create a toy data
 x <- seq(-5,5,by=1)
@@ -107,8 +108,9 @@ LE <-spec.emb(A=ADM,2,norm=FALSE)
 result.LOE <- LOE(ADM=ADM,p=2,c=0.1,method="BFGS",report=1000,iniX=LE)
 
 #Procrustes transform
-PLOE <- procrustes(Data,scale(result.LOE$X,scale=FALSE), scale = TRUE)$Yrot
-plot(PLOE,pch=20,xlab="",ylab="",cex=1,col=rainbow(N,start=.7,end=.9),
+library(vegan)
+LOEX <- procrustes(X=Data,Y=result.LOE$X)$Yrot
+plot(LOEX,pch=20,xlab="",ylab="",cex=1,col=rainbow(N,start=.7,end=.9),
 xlim=c(-7,7),ylim=c(-7,7),main="LOE")
 ###############################
 

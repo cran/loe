@@ -1,5 +1,6 @@
 useDynLib("loe")
-import("igraph", "MASS", "vegan", "Matrix")
+importFrom("MASS", "mvrnorm")
+importFrom("stats", "dist", "optim")
 export("LOE")
 export("SOE")
 export("make.kNNG")

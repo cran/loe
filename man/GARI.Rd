@@ -50,6 +50,7 @@ been satisfied by the solution.
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
+library(igraph)
 ###########
 #Based on the distance matrix of an embedding, 
 #this function provides the recovered adjacency matrix for given number of nearest neighbors.

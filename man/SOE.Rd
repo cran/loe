@@ -81,6 +81,7 @@ SOE(CM, N, p = 2, c = 0.1, maxit = 1000, report = 100, iniX = "rand",rnd=10000)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
+library(MASS)
 data(eurodist)
 OIF <- get.order(as.matrix(eurodist))
 sid <- sample(1:nrow(OIF))

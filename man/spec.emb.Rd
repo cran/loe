@@ -56,6 +56,7 @@ spec.emb(A, p, norm = TRUE)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 %}
 \examples{
+library(igraph)
 ADM <- as.matrix( get.adjacency(graph.famous("Icosahedral")) )
 
 #Apply some graph embedding methods
